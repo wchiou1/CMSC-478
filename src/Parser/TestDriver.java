@@ -10,7 +10,7 @@ public class TestDriver {
 			}
 		}
 		
-		Picture pic=new Picture(10,10,color);
+		Picture pic=new Picture(color);
 		
 		System.out.println("original:");
 		for(int i=0; i<10; i++){
