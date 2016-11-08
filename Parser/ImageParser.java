@@ -1,3 +1,4 @@
+package Parser;
 import java.io.IOException;
 import javax.imageio.ImageIO;
 import java.io.File;
@@ -10,11 +11,17 @@ public class ImageParser {
 public static final String IMG = "pix.jpg";
 
 public static void main(String[] args) {
+	Picture test = parsePic(IMG);
+   
 
-    BufferedImage img;
+}
+
+private static Picture parsePic(String fileName){
+	BufferedImage img;
+	Color[][] pixels = null;
     try {
-        img = ImageIO.read(new File(IMG));
-        Color[][] pixels = new Color[img.getWidth()][img.getHeight()];
+        img = ImageIO.read(new File(fileName));
+        pixels = new Color[img.getWidth()][img.getHeight()];
         int[] rgb;
         
         for(int x = 0; x < img.getWidth(); x++){
@@ -23,12 +30,14 @@ public static void main(String[] args) {
         		pixels[x][y] = new Color(rgb[0],rgb[1],rgb[2]);
         	}
         }
+        
 
 
     } catch (IOException e) {
         e.printStackTrace();
     }
-
+    return new Picture(pixels);
+	    
 }
 
 private static int[] getPixelData(BufferedImage img, int x, int y) {
