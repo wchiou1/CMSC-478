@@ -6,4 +6,7 @@ public class Color{
 		this.g=g;
 		this.b=b;
 	}
+	public String toString(){
+		return "("+r+","+g+","+b+")";
+	}
 }

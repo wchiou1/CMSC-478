@@ -12,6 +12,8 @@ public static final String IMG = "pix.jpg";
 
 public static void main(String[] args) {
 	Picture test = parsePic(IMG);
+	System.out.println(test.x+","+test.y);
+	System.out.println(test.pixels[0][0]);
    
 
 }
