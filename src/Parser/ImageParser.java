@@ -1,4 +1,5 @@
 package Parser;
+
 import java.io.IOException;
 import javax.imageio.ImageIO;
 import java.io.File;
