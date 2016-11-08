@@ -1,4 +1,5 @@
 package Parser;
+
 public class Picture{
 	public int x,y;
 	public Color[][] pixels;
